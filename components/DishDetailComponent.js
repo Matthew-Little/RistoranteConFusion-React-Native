@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text} from 'react-native';
 import { Card } from 'react-native-elements';
 import { DISHES } from '../shared/dishes.js';
@@ -41,7 +41,7 @@ class DishDetail extends Component {
 
     render() {
 
-        const dishId = this.props.navigation.getParam('dishId', '')
+        const dishId = this.props.route.params.dishId
 
         return(
             <RenderDish dish={this.state.dishes[+dishId]} />
